@@ -1,0 +1,9 @@
+module seven_bit_counter(input rst, clk, ci, output logic [6:0]cnt, co);
+
+	always @(posedge clk, posedge rst)begin
+		if(rst) cnt <= 6'b0;
+		else if (ci) cnt <= cnt+1;
+
+	end
+
+endmodule
